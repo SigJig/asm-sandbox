@@ -1,7 +1,7 @@
-%include "utils/asm.mac"
+%include "utils/asm.inc"
 
 section .data
-    snippet db "hello world"
+    snippet db "hello world",NEWLINE
     sn_len equ $-snippet
 
 section .text
