@@ -1,5 +1,11 @@
 
 DEST = ./dest
+CDEST = $(DEST)/c
+
+all: C.o main
+
+C.o: main.c
+	gcc -S -O0 -o $(CDEST)/csource.s main.c
 
 main: main.o
 	ld -o $(DEST)/main $(DEST)/main.o
